@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GTDFundAllocatorService.Domain.Implementation\GTDFundAllocatorService.Domain.Implementation.csproj" />
+    <ProjectReference Include="..\GTDFundAllocatorService.Domain.Shared\GTDFundAllocatorService.Domain.Shared.csproj" />
     <ProjectReference Include="..\GTDFundAllocatorService.Foundation\GTDFundAllocatorService.Foundation.csproj" />
+    <ProjectReference Include="..\GTDFundAllocatorService.Repository.Implementation\GTDFundAllocatorService.Repository.Implementation.csproj" />
     <ProjectReference Include="..\GTDFundAllocatorService.Repository.Shared\GTDFundAllocatorService.Repository.Shared.csproj" />
   </ItemGroup>
 

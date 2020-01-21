@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using GTDFundAllocatorService.Domain.Implementation;
 using GTDFundAllocatorService.Domain.Shared;
+using GTDFundAllocatorService.Repository.Implementation;
 using GTDFundAllocatorService.Repository.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,7 +29,9 @@ namespace GTDFundAllocatorService
             services
                 .AddDbContext<FundAllocatorDbContext>(options => 
                     options.UseSqlServer(Configuration.GetConnectionString("Default")))
-                .AddAutoMapper(typeof(Startup), typeof(DomainProfile));
+                .AddAutoMapper(typeof(Startup), typeof(DomainProfile))
+                .AddDomainServices()
+                .AddRepositoryServices();
         }
         
 
